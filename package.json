@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "PACs d'Eines HTML i CSS",
   "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "parcel:dev": "parcel",
     "parcel:build": "parcel build",
