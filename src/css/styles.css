@@ -1,9 +1,61 @@
-h1 {
-    color: hotpink;
-    font-family: cursive;
+@font-face {
+    font-family: 'Kayonest';
+    src: url("fonts/Kayonest-Free-Trial.ttf") format('truetype');
+    font-weight: 1 999; 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 body {
-    height: 100vh;
-    color: #1f1f1f;
-    background: linear-gradient(to bottom, #bada55, #c0ffee);
+    color: black;
+    background: white;
+}
+main {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 576px){
+    main {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px) {
+    main {
+        max-width: 80%;
+    }
+}
+li{
+    display: inline;
+    list-style: none;
+    font-family: 'Kayonest', Helvetica, sans-serif;
+    text-transform: lowercase;
+}
+nav {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: gray;
+}
+a:hover {
+    color: black;
+    font-style: oblique;
+}
+h1 {
+    font-family: 'Kayonest', Helvetica, sans-serif;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.gallery li{
+    background-color: #A45E1F;
+    height: 350px;
+    text-align: center;
+    line-height: 350px;
 }
