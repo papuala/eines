@@ -1,8 +1,25 @@
 @font-face {
-    font-family: 'Kayonest';
-    src: url("fonts/Kayonest-Free-Trial.ttf") format('truetype');
+    font-family: 'Ade';
+    src: url("fonts/Ade-Display.otf") format('truetype');
     font-weight: 1 999; 
 }
+@font-face {
+    font-family: 'Mauno';
+    src: url("fonts/Mauno-regular.ttf") format('truetype');
+    font-weight: 1 999; 
+}@font-face {
+    font-family: 'Filaris';
+    src: url("fonts/Filaris.otf") format('truetype');
+    font-weight: 1 999; 
+}
+:root {
+    --orange: #ce7f2c;
+    --dark-green:#3a5335;
+    --light-green:#709e53;
+    --off-white: #e7dfd2;
+    --white: #ffffff;
+    --black: rgb(0, 0, 0);
+  }
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +27,13 @@
     max-width: 100%;
 }
 body {
-    color: black;
-    background: white;
+    color: var(--black);
+    background: var(--off-white);
 }
 main {
-    max-width: 350px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 800px;
 }
 @media (min-width: 576px){
     main {
@@ -28,30 +45,55 @@ main {
         max-width: 80%;
     }
 }
+header {
+    background-color: var(--white);
+    margin-bottom: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+header div {
+    margin-bottom: 10px;
+    font-family: 'Ade', Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+nav li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+h1 {
+    font-family: 'Ade', Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5em;
+    color: var(--white);
+}
 li{
     display: inline;
     list-style: none;
-    font-family: 'Kayonest', Helvetica, sans-serif;
     text-transform: lowercase;
-}
-nav {
-    text-align: center;
 }
 a {
     text-decoration: none;
     color: gray;
 }
-a:hover {
+a:hover, a.current-page {
     color: black;
     font-style: oblique;
-}
-h1 {
-    font-family: 'Kayonest', Helvetica, sans-serif;
 }
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
+}
+.contact {
+    background-image: url(../img/contact_background.jpg);
+    background-size: cover;
+}
+.home {
+    background-image: url(../img/home_background_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .gallery li{
     background-color: #A45E1F;
