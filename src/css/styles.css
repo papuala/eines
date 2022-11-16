@@ -135,10 +135,26 @@ a:hover, a.current-page {
     background-size: cover;
 }
 .home {
-    background-image: url(../img/home_background_1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    animation-name: background-animation;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
 }
+@keyframes background-animation{
+    0%, 100%{
+      background-image: url(../img/home_background_1.jpg);
+    }
+    25%{
+      background-image: url(../img/home_background_2.jpg);
+    }
+    50%{
+      background-image: url(../img/home_background_3.jpg);
+    }
+    75%{
+      background-image: url(../img/home_background_4.jpg);
+    }
+ }
 .gallery li{
     background-color: #A45E1F;
     height: 350px;
