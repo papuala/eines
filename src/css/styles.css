@@ -4,15 +4,6 @@
     src: url("fonts/Ade-Display.otf") format('truetype');
     font-weight: 1 999; 
 }
-@font-face {
-    font-family: 'Mauno';
-    src: url("fonts/Mauno-regular.ttf") format('truetype');
-    font-weight: 1 999; 
-}@font-face {
-    font-family: 'Filaris';
-    src: url("fonts/Filaris.otf") format('truetype');
-    font-weight: 1 999; 
-}
 
 /* General styles */
 :root {
@@ -33,22 +24,27 @@ body {
     color: var(--black);
     background: var(--off-white);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     text-align: center;
+}
+.home, .contact {
+    height: 100vh;
+    overflow: hidden;
 }
 main {
     margin-left: auto;
     margin-right: auto;
     max-width: 80%;
+    height: 100%;
 }
 header {
     background-color: var(--white);
-    margin-bottom: 100px;
     padding-top: 20px;
     padding-bottom: 20px;
-    text-align: center;
 }
 header div {
-    margin-bottom: 10px;
+    margin: 15px;
     font-family: 'Ade', Helvetica, sans-serif;
     text-transform: uppercase;
 }
@@ -60,23 +56,24 @@ li {
     display: inline;
 }
 nav li {
-    margin-left: 10px;
-    margin-right: 10px;
     list-style: none;
     text-transform: lowercase;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin: 10px;
 }
 h1 {
     font-family: 'Ade', Helvetica, sans-serif;
     text-transform: uppercase;
-    font-size: 5em;
+    font-size: 3em;
     color: var(--white);
+    margin: 30px 0;
 }
 p {
     padding: 10px 0;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.5em;
+}
+main > p {
+    margin: 30px 0;
 }
 a {
     text-decoration: none;
@@ -100,8 +97,8 @@ button {
 .home button {
     background-color: transparent;
     position: absolute;
-    right: 50px;
-    top: 50px;
+    right: 20px;
+    top: 25px;
     border-width: 0;
 }
 #close-home-menu {
@@ -129,46 +126,36 @@ button {
     color: var(--white);
 }
 .home h1{
-    padding-top: 200px;
+    padding-top: 250px;
+    line-height: 1.5em;
+    font-size: 4em;
+    margin: 0;
 }
 .home {
-    background-size: cover;
-    background-repeat: no-repeat;
     animation-name: background-animation;
     animation-duration: 12s;
     animation-iteration-count: infinite;
 }
 @keyframes background-animation{
     0%, 100%{
-      background-image: url(../img/home_background_1.jpg);
+      background-image: url(../img/backgrounds/home_1.jpg);
     }
-    25%{
-      background-image: url(../img/home_background_2.jpg);
+    33%{
+      background-image: url(../img/backgrounds/home_2.jpg);
     }
-    50%{
-      background-image: url(../img/home_background_3.jpg);
-    }
-    75%{
-      background-image: url(../img/home_background_4.jpg);
+    66%{
+      background-image: url(../img/backgrounds/home_3.jpg);
     }
 }
 
 /* About page */
-.about > div {
-    display: grid;
-    grid-template-columns: 75% 20%;
-    justify-content: space-between;
-}
-.about h1 {
-    text-align: left;
-}
+
 
 /* Gallery page */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 10px;
-    margin-top: 100px;
     margin-bottom: 100px;
 }
 .gallery a{
@@ -251,7 +238,7 @@ button {
 
 /* Contact page */
 .contact {
-    background-image: url(../img/contact_background.jpg);
+    background-image: url(../img/backgrounds/contact_desktop.jpg);
     background-size: cover;
     text-align: center;
 }
@@ -259,10 +246,54 @@ button {
     padding-top: 100px;
     padding-bottom: 50px;
 }
-.contact li {
-    padding-left: 30px;
-    padding-right: 30px;
+.contact main li {
+    display: block;
+    padding-bottom: 30px;
 }
 .contact img {
     height: 50px;
+}
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+    @keyframes background-animation{
+        0%, 100%{
+          background-image: url(../img/backgrounds/home_4.jpg);
+        }
+        33%{
+            background-image: url(../img/backgrounds/home_5.jpg);
+          }
+        66%{
+          background-image: url(../img/backgrounds/home_6.jpg);
+        }
+    }
+    .home h1, .contact h1 {
+        font-size: 5em;
+    }
+    .about {
+        text-align: left;
+        padding-top: 20px;
+    }
+    .about > div {
+        display:flex;
+        flex-flow: column;
+    }
+    .about img.bottom {
+        order:0;
+        width: 40%;
+    }
+    .about p.top {
+        order:-1;
+    }
+    p {
+        font-size: 1.2em;
+    }
+    nav li {
+        margin: 20px;
+    }
+    .contact main li {
+        display: inline;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
