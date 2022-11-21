@@ -253,6 +253,43 @@ button {
 
 
 /* Detail pages */
+.portfoli {
+    background-color: #3a5335;
+}
+.arrow-left {
+    position: fixed;
+    left: 20px;
+    bottom: 50vh;
+    height: 40px;
+}
+.arrow-right {
+    position: fixed;
+    right: 20px;
+    bottom: 50vh;
+    height: 40px;
+}
+.detail header {
+    padding: 0;
+}
+.detail h1 {
+    color: var(--black);
+    margin: 50px 0;
+}
+.detail li {
+    display: list-item;
+    list-style: square;
+    margin-left: 30px;
+}
+.detail-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    text-align: left;
+}
+.image-container {
+    background-color: #3a5335;
+}
+
 
 /* Links */
 .links > li{
@@ -329,10 +366,16 @@ li li a:hover {
     .about img.third {
         order: 1;
     }
+    .detail-info {
+        grid-template-columns: 1fr;
+    }
+    .image-container {
+        order: -1;
+        height: 400px;
+    }
 }
 @media screen and (min-width: 1024px){
     .about p, .about h1{
-        text-align: left;
         padding-top: 20px;
     }
     .about img {
@@ -342,5 +385,8 @@ li li a:hover {
     }
     .about > div {
         display: block;
+    }
+    .detail main {
+        width: 70%;
     }
 }
