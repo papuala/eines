@@ -27,6 +27,7 @@ body {
     background-size: cover;
     background-position: center;
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .home, .contact {
     height: 100vh;
@@ -49,7 +50,7 @@ header div {
     text-transform: uppercase;
 }
 footer {
-    height: 100px;
+    margin-top: 50px;
 }
 li {
     list-style: none;
@@ -66,6 +67,11 @@ h1 {
     font-size: 3em;
     color: var(--white);
     margin: 30px 0;
+}
+h2 {
+    font-size: 1.2em;
+    text-align: right;
+    margin-bottom: 10px;
 }
 p {
     padding: 10px 0;
@@ -149,7 +155,13 @@ button {
 }
 
 /* About page */
-
+.about > div {
+    display:flex;
+    flex-flow: column;
+}
+.about img {
+    margin: 10px 0;
+}
 
 /* Gallery page */
 .gallery {
@@ -202,6 +214,12 @@ button {
 #gallery_12 {
     background-image: url(../img/gallery/gallery_12.jpg);
 }
+#gallery_13 {
+    background-image: url(../img/gallery/gallery_13.jpg);
+}
+#gallery_14 {
+    background-image: url(../img/gallery/gallery_14.jpg);
+}
 .gallery a div {
     display: none;
     height: inherit;
@@ -236,6 +254,24 @@ button {
 
 /* Detail pages */
 
+/* Links */
+.links > li{
+    text-align: left;
+    display: block;
+    border-bottom: 2px solid var(--orange);
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 20px 15px;
+}
+li li {
+    display: list-item;
+    list-style: square;
+    margin-left: 20px;
+}
+li li a:hover {
+    color: var(--black);
+}
+
 /* Contact page */
 .contact {
     background-image: url(../img/backgrounds/contact_desktop.jpg);
@@ -255,6 +291,7 @@ button {
 }
 
 /* Responsive */
+
 @media screen and (min-width: 768px) {
     @keyframes background-animation{
         0%, 100%{
@@ -267,23 +304,8 @@ button {
           background-image: url(../img/backgrounds/home_6.jpg);
         }
     }
-    .home h1, .contact h1 {
+    h1 {
         font-size: 5em;
-    }
-    .about {
-        text-align: left;
-        padding-top: 20px;
-    }
-    .about > div {
-        display:flex;
-        flex-flow: column;
-    }
-    .about img.bottom {
-        order:0;
-        width: 40%;
-    }
-    .about p.top {
-        order:-1;
     }
     p {
         font-size: 1.2em;
@@ -295,5 +317,30 @@ button {
         display: inline;
         padding-left: 30px;
         padding-right: 30px;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .about img.second {
+        order: -1;
+    }
+    .about p.first {
+        order: 0;
+    }
+    .about img.third {
+        order: 1;
+    }
+}
+@media screen and (min-width: 1024px){
+    .about p, .about h1{
+        text-align: left;
+        padding-top: 20px;
+    }
+    .about img {
+        max-height: 350px;
+        margin: 30px 0;
+
+    }
+    .about > div {
+        display: block;
     }
 }
