@@ -31,6 +31,7 @@ body {
     background-position: center;
     text-align: center;
     font-family: 'Mulish', sans-serif;
+    min-height: 100vh;
 }
 .home, .contact {
     height: 100vh;
@@ -146,23 +147,37 @@ span {
 .home h1{
     padding-top: 200px;
     line-height: 1.5em;
-    font-size: 5em;
+    font-size: 3.5em;
     margin: 0;
 }
 .home {
-    animation-name: background-animation;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: background-animation;
+            animation-name: background-animation;
+    -webkit-animation-duration: 12s;
+            animation-duration: 12s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+@-webkit-keyframes background-animation{
+    0%, 100%{
+      background-image: url(img/backgrounds/home_1.jpg);
+    }
+    33%{
+      background-image: url(img/backgrounds/home_2.jpg);
+    }
+    66%{
+      background-image: url(img/backgrounds/home_3.jpg);
+    }
 }
 @keyframes background-animation{
     0%, 100%{
-      background-image: url(../img/backgrounds/home_1.jpg);
+      background-image: url(img/backgrounds/home_1.jpg);
     }
     33%{
-      background-image: url(../img/backgrounds/home_2.jpg);
+      background-image: url(img/backgrounds/home_2.jpg);
     }
     66%{
-      background-image: url(../img/backgrounds/home_3.jpg);
+      background-image: url(img/backgrounds/home_3.jpg);
     }
 }
 
@@ -189,54 +204,55 @@ span {
     background-position: 50%;
     display: block;
     font-size: 2em;
+    background-color: #3a5335;
 }
 #gallery_1 {
-    background-image: url(../img/gallery/gallery_1.jpg);
+    background-image: url(img/gallery/gallery_1.jpg);
 }
 #gallery_2 {
-    background-image: url(../img/gallery/gallery_2.jpg);
+    background-image: url(img/gallery/gallery_2.jpg);
 }
 #gallery_3 {
-    background-image: url(../img/gallery/gallery_3.jpg);
+    background-image: url(img/gallery/gallery_3.jpg);
 }
 #gallery_4 {
-    background-image: url(../img/gallery/gallery_4.jpg);
+    background-image: url(img/gallery/gallery_4.jpg);
 }
 #gallery_5 {
-    background-image: url(../img/gallery/gallery_5.jpg);
+    background-image: url(img/gallery/gallery_5.jpg);
 }
 #gallery_6 {
-    background-image: url(../img/gallery/gallery_6.jpg);
+    background-image: url(img/gallery/gallery_6.jpg);
 }
 #gallery_7 {
-    background-image: url(../img/gallery/gallery_7.jpg);
+    background-image: url(img/gallery/gallery_7.jpg);
 }
 #gallery_8 {
-    background-image: url(../img/gallery/gallery_8.jpg);
+    background-image: url(img/gallery/gallery_8.jpg);
 }
 #gallery_9 {
-    background-image: url(../img/gallery/gallery_9.jpg);
+    background-image: url(img/gallery/gallery_9.jpg);
 }
 #gallery_10 {
-    background-image: url(../img/gallery/gallery_10.jpg);
+    background-image: url(img/gallery/gallery_10.jpg);
 }
 #gallery_11 {
-    background-image: url(../img/gallery/gallery_11.jpg);
+    background-image: url(img/gallery/gallery_11.jpg);
 }
 #gallery_12 {
-    background-image: url(../img/gallery/gallery_12.jpg);
+    background-image: url(img/gallery/gallery_12.jpg);
 }
 #gallery_13 {
-    background-image: url(../img/gallery/gallery_13.jpg);
+    background-image: url(img/gallery/gallery_13.jpg);
 }
 #gallery_14 {
-    background-image: url(../img/gallery/gallery_14.jpg);
+    background-image: url(img/gallery/gallery_14.jpg);
 }
 #gallery_15 {
-    background-image: url(../img/gallery/gallery_15.jpg); 
+    background-image: url(img/gallery/gallery_15.jpg); 
 }
 #gallery_16 {
-    background-image: url(../img/gallery/gallery_16.jpg); 
+    background-image: url(img/gallery/gallery_16.jpg); 
 }
 .gallery a div {
     display: none;
@@ -292,7 +308,6 @@ span {
 }
 .detail li {
     display: list-item;
-    list-style: square;
     margin-left: 30px;
     font-size: 1.2em;
     line-height: 1.5em;
@@ -342,7 +357,7 @@ li li a:hover {
 
 /* Contact page */
 .contact {
-    background-image: url(../img/backgrounds/contact_desktop.jpg);
+    background-image: url(img/backgrounds/contact_desktop.jpg);
     background-size: cover;
     text-align: center;
 }
@@ -361,15 +376,26 @@ li li a:hover {
 /* Responsive */
 
 @media screen and (min-width: 768px) {
-    @keyframes background-animation{
+    @-webkit-keyframes background-animation{
         0%, 100%{
-          background-image: url(../img/backgrounds/home_4.jpg);
+          background-image: url(img/backgrounds/home_4.jpg);
         }
         33%{
-            background-image: url(../img/backgrounds/home_5.jpg);
+            background-image: url(img/backgrounds/home_5.jpg);
           }
         66%{
-          background-image: url(../img/backgrounds/home_6.jpg);
+          background-image: url(img/backgrounds/home_6.jpg);
+        }
+    }
+    @keyframes background-animation{
+        0%, 100%{
+          background-image: url(img/backgrounds/home_4.jpg);
+        }
+        33%{
+            background-image: url(img/backgrounds/home_5.jpg);
+          }
+        66%{
+          background-image: url(img/backgrounds/home_6.jpg);
         }
     }
     h1 {
@@ -400,10 +426,6 @@ li li a:hover {
     .detail-info {
         grid-template-columns: 1fr;
     }
-    .image-container {
-        order: -1;
-        height: 400px;
-    }
 }
 @media screen and (min-width: 1024px){
     .about p, .about h1{
@@ -420,10 +442,13 @@ li li a:hover {
     .detail main {
         width: 70%;
     }
-    .detail > div {
+    .detail > article {
         display: grid;
         grid-gap: 30px;
         text-align: left;
+    }
+    .detail li {
+        list-style: square;
     }
     .vein-info {
         grid-template-columns: 2fr 3fr;
