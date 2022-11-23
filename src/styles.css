@@ -210,7 +210,7 @@ span {
     background-image: url(img/gallery/gallery_1.jpg);
 }
 #gallery_2 {
-    background-image: url(img/gallery/gallery_2.jpg);
+    background-image: url(img/gallery/gallery_2.png);
 }
 #gallery_3 {
     background-image: url(img/gallery/gallery_3.jpg);
@@ -357,7 +357,7 @@ li li a:hover {
 
 /* Contact page */
 .contact {
-    background-image: url(img/backgrounds/contact_desktop.jpg);
+    background-image: url(img/backgrounds/contact.jpg);
     background-size: cover;
     text-align: center;
 }

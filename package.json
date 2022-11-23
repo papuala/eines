@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/papuala/eines#readme",
   "dependencies": {
-    "autoprefixer": "^10.4.13"
+    "autoprefixer": "^10.4.13",
+    "image-preloadr": "^1.0.0"
   }
 }
