@@ -91,6 +91,9 @@ footer p {
     color: var(--white);
     font-size: 0.7em;
 }
+ul {
+    overflow: visible;
+}
 li {
     list-style: none;
     display: inline;
@@ -150,6 +153,7 @@ span {
     position: relative;
     margin: 0;
     padding: 0;
+    overflow: visible;
 }
 .home button {
     background-color: transparent;
@@ -182,10 +186,6 @@ span {
 }
 .home a {
     color: var(--white);
-}
-.home main {
-    margin: 0;
-    max-width: 100%;
 }
 .home h1{
     padding-top: 200px;
