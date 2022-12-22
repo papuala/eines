@@ -253,7 +253,7 @@ span {
     position: relative;
     width: 80px;
     display: inline-block;
-    animation: flower-rotation 5s infinite ease-in-out;
+    animation: flower-rotation 5s infinite linear;
 }
 .circle {
     background-color: var(--white);
@@ -281,9 +281,6 @@ span {
     width: 20%;
 }
 @keyframes flower-rotation {
-    0% {
-      transform: rotate(0deg);
-    }
     100% {
       transform: rotate(360deg);
     }
@@ -411,12 +408,8 @@ span {
     font-size: 1.2em;
     line-height: 1.5em;
 }
-.vein-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.horizontal {
-    grid-column: 1 / span 2;
+article div {
+    display: flex;
 }
 iframe {
     width: 100%;
@@ -516,14 +509,11 @@ li li a:hover {
     .about img.second {
         order: -1;
     }
-    .about p.first {
+    p.first {
         order: 0;
     }
-    .about img.third {
+    img.third {
         order: 1;
-    }
-    .detail-info {
-        grid-template-columns: 1fr;
     }
     .arrow-left img, .arrow-right img{
         height: 30px;
@@ -533,6 +523,9 @@ li li a:hover {
     }
     footer nav {
         margin-top: 20px;
+    }
+    .delete {
+        display: none;
     }
 }
 @media screen and (min-width: 1024px){
@@ -566,9 +559,6 @@ li li a:hover {
     }
     .arrow-right {
         right: 20px;
-    }
-    .vein-info {
-        grid-template-columns: 2fr 3fr;
     }
     .metal-info {
         grid-template-columns: 1fr 2fr;
