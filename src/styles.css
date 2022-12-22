@@ -408,7 +408,7 @@ span {
     font-size: 1.2em;
     line-height: 1.5em;
 }
-article div {
+.vein-info div {
     display: flex;
 }
 iframe {
@@ -422,6 +422,7 @@ blockquote, blockquote + p {
     font-size: 1.2em;
     font-style: italic;
     margin-top: 40px;
+    padding-right: 3px;
 }
 .metal-images {
     display: grid;
