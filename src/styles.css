@@ -314,40 +314,40 @@ span {
 #gallery_4 {
     background-image: url(img/gallery/gallery_4.jpg);
 }
-#gallery_5 {
+#gallery_5.visible {
     background-image: url(img/gallery/gallery_5.jpg);
 }
-#gallery_6 {
+#gallery_6.visible {
     background-image: url(img/gallery/gallery_6.jpg);
 }
-#gallery_7 {
+#gallery_7.visible {
     background-image: url(img/gallery/gallery_7.jpg);
 }
-#gallery_8 {
+#gallery_8.visible {
     background-image: url(img/gallery/gallery_8.jpg);
 }
-#gallery_9 {
+#gallery_9.visible {
     background-image: url(img/gallery/gallery_9.jpg);
 }
-#gallery_10 {
+#gallery_10.visible {
     background-image: url(img/gallery/gallery_10.jpg);
 }
-#gallery_11 {
+#gallery_11.visible {
     background-image: url(img/gallery/gallery_11.jpg);
 }
-#gallery_12 {
+#gallery_12.visible {
     background-image: url(img/gallery/gallery_12.jpg);
 }
-#gallery_13 {
+#gallery_13.visible {
     background-image: url(img/gallery/gallery_13.jpg);
 }
-#gallery_14 {
+#gallery_14.visible {
     background-image: url(img/gallery/gallery_14.jpg);
 }
-#gallery_15 {
+#gallery_15.visible {
     background-image: url(img/gallery/gallery_15.jpg); 
 }
-#gallery_16 {
+#gallery_16.visible {
     background-image: url(img/gallery/gallery_16.jpg); 
 }
 .gallery a div {
