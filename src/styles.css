@@ -1,9 +1,11 @@
 /* Typographies */
 @font-face {
+    font-display: swap;
     font-family: 'Ade';
     src: url("fonts/Ade-Display.otf");
 }
 @font-face {
+    font-display: swap;
     font-family: 'Mulish';
     src: url("fonts/Mulish-VariableFont_wght.ttf");
 }
