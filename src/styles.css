@@ -413,6 +413,8 @@ span {
 }
 .vein-info div {
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 lite-youtube {
     min-height: 400px;
